@@ -94,6 +94,5 @@ endmacro()
 # 
 
 # Create linear_axis FMU library
-add_fmu_library(linear_axis)
-add_fmu_library(DoubleMassSpringDamper)
-add_fmu_library(machine_tool)
+# add_fmu_library(wind_turbine)
+# add_fum_library(hydro_plant)

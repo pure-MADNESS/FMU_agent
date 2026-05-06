@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<fmiModelDescription fmiVersion="3.0" generationDateAndTime="2026-03-30T16:54:02Z" generationTool="Simulink (R2025b)" instantiationToken="{860f527d-aeba-d621-b18c-6ecb9fdbf5d3}" modelName="wind_turbine" variableNamingConvention="structured" version="1.9">
+  <ModelExchange canBeInstantiatedOnlyOncePerProcess="true" canGetAndSetFMUState="false" canSerializeFMUState="false" modelIdentifier="wind_turbine" needsExecutionTool="false"/>
+  <UnitDefinitions>
+    <Unit name="1"/>
+    <Unit name="rad/s"/>
+  </UnitDefinitions>
+  <DefaultExperiment startTime="0" stepSize="0.2" stopTime="10"/>
+  <ModelVariables>
+    <Float64 causality="input" description="actual_wind" initial="exact" name="actual_wind" start="0" unit="1" valueReference="0" variability="continuous"/>
+    <Float64 causality="input" description="resisting_torque" initial="exact" name="resisting_torque" start="0" valueReference="1" variability="continuous"/>
+    <Float64 causality="output" description="omega" initial="calculated" name="omega" unit="rad/s" valueReference="2" variability="continuous"/>
+    <Float64 causality="independent" description="time" name="time" valueReference="3" variability="continuous"/>
+    <Float64 causality="local" description="ContState1" initial="calculated" name="ContState1" valueReference="4" variability="continuous"/>
+    <Float64 causality="local" description="ContState2" initial="calculated" name="ContState2" valueReference="5" variability="continuous"/>
+    <Float64 causality="local" description="ContState3" initial="calculated" name="ContState3" valueReference="6" variability="continuous"/>
+    <Float64 causality="local" derivative="4" description="Deriv1" initial="calculated" name="Deriv1" valueReference="7" variability="continuous"/>
+    <Float64 causality="local" derivative="5" description="Deriv2" initial="calculated" name="Deriv2" valueReference="8" variability="continuous"/>
+    <Float64 causality="local" derivative="6" description="Deriv3" initial="calculated" name="Deriv3" valueReference="9" variability="continuous"/>
+  </ModelVariables>
+  <ModelStructure>
+    <Output valueReference="2"/>
+    <ContinuousStateDerivative valueReference="7"/>
+    <ContinuousStateDerivative valueReference="8"/>
+    <ContinuousStateDerivative valueReference="9"/>
+    <InitialUnknown valueReference="2"/>
+    <InitialUnknown valueReference="4"/>
+    <InitialUnknown valueReference="5"/>
+    <InitialUnknown valueReference="6"/>
+    <InitialUnknown valueReference="7"/>
+    <InitialUnknown valueReference="8"/>
+    <InitialUnknown valueReference="9"/>
+  </ModelStructure>
+  <Annotations>
+    <Annotation type="com.mathworks.Simulink">
+      <Simulink>
+        <ImportCompatibility FMUProduct="standalone FMU" canSourceFileCodeGeneration="false" requireMATLABOnPath="no" requireRelease="all"/>
+        <SimulinkModelInterface>
+          <Inport blockPath="wind_turbine/actual_wind" dataType="double" dimension="[1]" portName="actual_wind" portNumber="1" sampleTime="[0 0]" uniquePortName="actual_wind" unit="1"/>
+          <Inport blockPath="wind_turbine/resisting_torque" dataType="double" dimension="[1]" portName="resisting_torque" portNumber="2" sampleTime="[0 0]" uniquePortName="resisting_torque" unit=""/>
+          <Outport blockPath="wind_turbine/omega" dataType="double" dimension="[1]" portName="omega" portNumber="1" sampleTime="[0 0]" uniquePortName="omega" unit="rad/s"/>
+        </SimulinkModelInterface>
+      </Simulink>
+    </Annotation>
+  </Annotations>
+</fmiModelDescription>
